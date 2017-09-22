@@ -1,0 +1,101 @@
+<!--for post request -->
+
+<form method="post">
+     {% csrf_token %}
+
+    <!--In style tag body background,img size and focus on box etc.  -->
+    <style>
+
+body{
+  text-align:center;
+  background: url("https://ak3.picdn.net/shutterstock/videos/26423345/thumb/1.jpg");
+  background-size: cover ;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  font-family: helvetica;}
+
+
+img{
+  border-radius: 100%;
+  border: 1px solid #ddd;
+  padding: 5px;
+  width: 130px;
+   }
+
+
+input[type=text] {
+    width: 20%;
+    padding: 8px 8px;
+    margin: 8px 0;
+    }
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+
+input[type=password] {
+    width: 20%;
+    padding: 8px 8px;
+    margin: 8px 0;
+}
+
+input[type=password]:focus {
+    border: 3px solid #555;
+}
+
+p{
+    font-size: 22px;
+    }
+
+.right {
+    padding: 70px 0;
+    text-align: center;
+    }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+</style>
+<!-- this is our html page body -->
+
+    <body>
+
+        <div class="right">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE_asoZyfEzU-Fqj-zUbfhS7Ea0TnowkNhGwi5ASCHL4Xtjxya">
+
+        <p>Login Form</p>
+        <div>
+          <label for="username">Username: </label>
+          <input id="username" class="form-control" type="text" name="username"required value={{ username }}>
+        </div>
+
+        <div>
+          <label for="password">Password: </label>
+          <input id="password" class="form-control" type="password" name="password" required value={{ password }}>
+        </div>
+            <h3>{{message}}</h3>
+
+      <input type="submit" value="Log In">
+        </div>
+
+    </body>
+
+ </form>
